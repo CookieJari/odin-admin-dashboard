@@ -1,6 +1,10 @@
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0px;
 }
+/* --- MAIN LAYOUT ---- */
 .page-container {
   height: 100vh;
 
@@ -8,9 +12,6 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
-}
-.page-container > div {
-  border: 1px solid;
 }
 
 .sidebar-container {
@@ -25,4 +26,93 @@ body {
   background-color: rgb(219, 219, 219);
   grid-column: 2/-1;
   grid-row: 2/-1;
+}
+
+/* --------------- SIDEBAR -------------- */
+
+.sidebar-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.25fr 2fr 1.5fr 3fr;
+
+  gap: 5%;
+
+  padding-left: 5%;
+}
+
+/* -- branding -- */
+.branding {
+  display: grid;
+  grid-template-columns: 0.25fr 1fr;
+}
+.image-container {
+  display: grid;
+}
+.image-container > img {
+  margin: 0px;
+  width: 90%;
+  justify-self: center;
+  align-self: center;
+}
+
+/* -- navigation 1 -- */
+.navigation-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  gap: 5px;
+}
+.navigation-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px;
+}
+.navigation-option {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr;
+}
+.option {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+h2 {
+  margin: 0px;
+  font-size: 1.5em;
+}
+
+.icon-container {
+  width: 60%;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --------------- HEADER ------------- */
+
+.header-container {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 0.8fr 1.2fr;
+}
+
+/* --------------- MAIN SECTION -------------*/
+
+.main-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.main-container > div {
+  border: 1px solid;
+}
+
+.projects-container {
+  grid-row: 1/-1;
+  background-color: aliceblue;
 }
