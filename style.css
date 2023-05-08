@@ -1,0 +1,28 @@
+body {
+  margin: 0px;
+}
+.page-container {
+  height: 100vh;
+
+  background-color: bisque;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+.page-container > div {
+  border: 1px solid;
+}
+
+.sidebar-container {
+  background-color: lightblue;
+  grid-row: 1/-1;
+}
+.header-container {
+  grid-column: 2/-1;
+  background-color: white;
+}
+.main-container {
+  background-color: rgb(219, 219, 219);
+  grid-column: 2/-1;
+  grid-row: 2/-1;
+}
