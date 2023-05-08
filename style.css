@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
 * {
   box-sizing: border-box;
 }
 body {
   margin: 0px;
+  font-family: "Roboto", sans-serif;
 }
 /* --- MAIN LAYOUT ---- */
 .page-container {
@@ -33,7 +36,7 @@ body {
 .sidebar-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.25fr 2fr 1.5fr 3fr;
+  grid-template-rows: 0.25fr 6fr 3fr 10fr;
 
   gap: 5%;
 
@@ -70,23 +73,24 @@ body {
 }
 .navigation-option {
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 0.25fr 1fr;
   grid-template-rows: 1fr;
 }
 .option {
   text-align: center;
   display: flex;
   align-items: center;
+  padding-left: px;
 }
 h2 {
   margin: 0px;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 .icon-container {
-  width: 60%;
+  width: 1.5em;
   align-self: center;
-  justify-self: center;
+  justify-self: end;
   display: flex;
   align-items: center;
   justify-content: center;
