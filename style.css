@@ -97,11 +97,47 @@ h2 {
 }
 
 /* --------------- HEADER ------------- */
+.header-container{
+  border: 1px solid blue;
+  padding: 10px 40px;
+}
 
-.header-container {
+.header-grid-container {
+  height: 100%;
+  width: 100%;
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-template-rows: 0.8fr 1.2fr;
+}
+
+.header-grid-container >div{
+  border: 1px solid red;
+}
+
+.header-grid-container svg{
+height: auto;
+width: 2rem;
+}
+
+.search-container{
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr 10fr;
+}
+.searchbar-container{
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+input[type=search]{
+  border: none;
+  border-radius: 100px;
+  background-color: rgba(128, 128, 128, 0.192);
+  width: 90%;
+  height: 2.5em;
 }
 
 /* --------------- MAIN SECTION -------------*/
