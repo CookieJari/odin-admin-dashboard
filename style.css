@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap");
 
 :root {
 }
@@ -6,18 +7,19 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0px;
+  height: 100vh;
   font-family: "Roboto", sans-serif;
 }
 /* --- MAIN LAYOUT ---- */
 .page-container {
-  height: 100vh;
-
+  height: 100%;
   background-color: bisque;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: 200px 1fr;
 }
 
 .sidebar-container {
@@ -39,7 +41,8 @@ body {
 .sidebar-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.25fr 6fr 3fr 10fr;
+  grid-template-rows: 0.25fr 6fr 3fr;
+  padding-bottom: 90%;
 
   gap: 5%;
 
@@ -50,17 +53,29 @@ body {
 .branding {
   display: grid;
   grid-template-columns: 0.25fr 1fr;
+  margin-top: 10px;
 }
 .image-container {
+  width: max(0.2rem, 100%);
   display: grid;
 }
-.image-container > img {
+.image-container > svg {
   margin: 0px;
-  width: 4em;
+  width: max(0.2rem, 100%);
   justify-self: center;
   align-self: center;
 }
-
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header > h1 {
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  font-size: 2em;
+  margin: 0px;
+}
 /* -- navigation 1 -- */
 .navigation-1 {
   display: grid;
@@ -101,7 +116,6 @@ h2 {
 
 /* --------------- HEADER ------------- */
 .header-container {
-  border: 1px solid blue;
   padding: 10px 40px;
 }
 
@@ -230,5 +244,103 @@ input[type="search"]:focus {
 
 .projects-container {
   grid-row: 1/-1;
-  background-color: aliceblue;
+  background-color: rgb(241, 241, 241);
+}
+
+/* --- projects --- */
+
+.projects-container {
+  display: grid;
+  padding: 10px;
+  padding-top: 1.2rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1em 200px;
+  grid-auto-rows: 200px;
+  gap: 15px;
+}
+.projects-container > h2 {
+  grid-column: 1/-1;
+  margin: 0px;
+}
+
+.card-container {
+  background-color: rgb(255, 255, 255);
+  border-radius: 1rem;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: 2.5% 1fr;
+  grid-template-rows: 1fr 2.5em;
+
+  overflow-x: hidden;
+}
+.card-text {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.card-text > h2 {
+  margin: 0px;
+  font-size: 1.1em;
+}
+.card-text > p {
+  font-size: 0.9em;
+  margin: 0px;
+  margin-top: 0.6em;
+}
+.side-color {
+  background-color: yellow;
+  grid-row: 1/-1;
+}
+.icons-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1em;
+  padding-right: 1em;
+  margin-bottom: 0.5em;
+}
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* --- announcements --- */
+
+.announcements-container {
+  display: grid;
+  padding: 10px;
+  padding-top: 1.2rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1em 1fr;
+  gap: 15px;
+
+  background-color: rgb(241, 241, 241);
+}
+
+.announcement-card {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 15px;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.announcement {
+  border-bottom: 1px solid black;
+}
+.announcement > h2 {
+  margin: 0px;
+  margin-top: 0.5rem;
+  font-size: 1em;
+}
+.desc {
+  height: 3.5rem;
+  width: 100%;
+  font-size: 0.7em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.desc > p {
+  margin: 0px;
+  margin: 0.8em 0px;
 }
