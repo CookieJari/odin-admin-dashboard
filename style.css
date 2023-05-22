@@ -306,7 +306,7 @@ input[type="search"]:focus {
 
 /* --- announcements --- */
 
-.announcements-container {
+.side-container {
   display: grid;
   padding: 10px;
   padding-top: 1.2rem;
@@ -317,16 +317,18 @@ input[type="search"]:focus {
   background-color: rgb(241, 241, 241);
 }
 
-.announcement-card {
+.side-card {
   background-color: white;
   border-radius: 1rem;
   padding: 15px;
   padding-left: 15px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .announcement {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(163, 163, 163);
+  padding: 0px 0.25rem;
 }
 .announcement > h2 {
   margin: 0px;
@@ -343,4 +345,45 @@ input[type="search"]:focus {
 .desc > p {
   margin: 0px;
   margin: 0.8em 0px;
+  color: rgb(82, 82, 82);
+}
+
+/* --- trending --- */
+
+.trending {
+  display: grid;
+  grid-template-columns: 3em 1fr;
+  margin-bottom: 1rem;
+}
+
+.trending-prof-container {
+  border-radius: 500px;
+  height: 3em;
+  background-color: yellow;
+  align-self: center;
+}
+.trending-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25em;
+  margin-left: 1em;
+}
+.trending-desc > h3 {
+  margin: 0px;
+  font-size: 0.9em;
+}
+.trending-desc > p {
+  margin: 0px;
+  font-size: 0.9em;
+}
+
+.emp {
+  background-color: red;
+}
+.vader {
+  background-color: rgb(46, 46, 46);
+}
+.organa {
+  background-color: rgb(245, 235, 174);
 }
